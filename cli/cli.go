@@ -103,7 +103,7 @@ func Run() {
 			Flags: []cli.Flag{
 				flStore,
 				flStrategy, flFilter,
-				flHosts, flHeartBeat, flOverCommit,
+				flHosts, flHeartBeat, flOverCommit, flRebalance,
 				flTLS, flTLSCaCert, flTLSCert, flTLSKey, flTLSVerify,
 				flEnableCors},
 			Action: manage,

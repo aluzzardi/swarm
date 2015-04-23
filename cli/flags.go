@@ -99,6 +99,11 @@ var (
 		Value: &flFilterValue,
 	}
 
+	flRebalance = cli.BoolFlag{
+		Name:  "rebalance",
+		Usage: "enable cluster rebalancing",
+	}
+
 //	flCluster = cli.StringFlag{
 //		Name:  "cluster, c",
 //		Usage: "cluster to use [swarm, mesos]",

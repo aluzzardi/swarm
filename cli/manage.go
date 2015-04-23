@@ -133,6 +133,11 @@ func manage(c *cli.Context) {
 
 	cluster := swarm.NewCluster(sched, store, options)
 
+	if c.Bool("rebalance") {
+		watchdog := scheduler.NewWatchdog(cluster, store)
+		watchdog.Start()
+	}
+
 	// see https://github.com/codegangsta/cli/issues/160
 	hosts := c.StringSlice("host")
 	if c.IsSet("host") || c.IsSet("H") {
